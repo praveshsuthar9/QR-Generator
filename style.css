@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppins', sans-serif ;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.qr-container {
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+ justify-content: center;
+  flex-direction: column;
+}
+
+.qr-container p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.imgBox{
+  max-height: 0;
+  transition: max-height 1s linear;
+  overflow: hidden;
+  margin: 10px auto;
+  
+}
+
+.imgBox.show-img{
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+.qr-container input {
+  width: 100%;
+  height: 50px;
+  border-radius: 9px;
+  border: 1px solid #222;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.qr-container button {
+  background-color: #4d59f7;
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.qr-container button:hover {
+  background-color: transparent;
+  border: 1px solid #222;
+  color: #222;
+}
+
+.error{
+  animation:  shake 0.1s linear 10;
+}
+@keyframes shake{
+  0%{
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(-2px);
+  }
+  50%{
+    transform: translateX(0);
+  }
+  75%{
+    transform: translateX(2px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  body{
+    width: auto;
+  }
+}
